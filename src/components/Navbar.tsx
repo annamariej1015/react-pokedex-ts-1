@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <div className="navbar-nav">
-                        <Link className="nav-link" to='/'>Pokedex</Link>
+                        <Link className="nav-link text-dark" to='/'>Home</Link>
                         
                     </div>
                 </div>

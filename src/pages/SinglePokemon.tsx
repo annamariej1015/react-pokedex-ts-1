@@ -108,6 +108,7 @@ const SinglePokemonPage: React.FC = () => {
                           })}
                         </div>
                       </div>
+                      
                     </div>
                     {/* divider */}
                     <hr />
