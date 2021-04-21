@@ -1,6 +1,8 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { pokemonData } from '../data/pokemonData';
+import  ListItem  from '../components/ListItem';
+
 
 const HomePage: React.FC = () => {
   const [pokemon, setPokemon] = useState<Pokemon[]>(pokemonData);
@@ -56,16 +58,17 @@ const HomePage: React.FC = () => {
                   key={index}>
                   {/* section img pulled to left */}
                   <img src={poke.img} alt={poke.name} />
-                  <div className='poke-info'>
+                  <div className='poke-info text-center'>
                     <h2>
                       <Link to={`/pokemon/${poke.name.toLowerCase()}`}>
                         {poke.name}
                       </Link>
                     </h2>
                     <div>
-                      <small>Height: {poke.height}</small>
-                      <small>Weight: {poke.weight}</small>
+                      <ListItem poke={poke}/>
+                      
                     </div>
+                    
                   </div>
                   {/* section pokemon name that is wrapped in a link */}
                   {/* section for details under the pokemon name */}
