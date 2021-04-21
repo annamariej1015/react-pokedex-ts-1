@@ -72,10 +72,12 @@ const SinglePokemonPage: React.FC = () => {
                     {/* Pokemon Details */}
                     <div className='row'>
                       <div className='col'>
-                        <div className='text-secondary'>Height</div>
-                        <div>{pokemon.height}</div>
-                        <div className='text-secondary'>Weight</div>
-                        <div>{pokemon.weight}</div>
+                        <div className='text-secondary'>Height | Weight</div>
+                        <div>{pokemon.height} | {pokemon.weight}</div>
+                        <div className='text-secondary'>Can be Hatched from:</div>
+                        <div>{pokemon.egg} Egg</div>
+                        <div className="text-secondary">{pokemon.candy}</div>
+                        <div>{pokemon.candy_count}</div>
                       </div>
                       <div className='col'>
                         <div className='text-secondary'>Type</div>
@@ -108,6 +110,23 @@ const SinglePokemonPage: React.FC = () => {
                       </div>
                     </div>
                     {/* divider */}
+                    <hr />
+                    <div className="row text-center">
+                      <div className="col">
+                        <div className="text-secondary">Spawn Chance</div>
+                        <div>{pokemon.spawn_chance}</div>
+                      </div>
+
+                      <div className="col">
+                          <div className="text-secondary ">Avg. Spawn</div>
+                          <div>{pokemon.avg_spawns}</div>
+                      </div>
+                      
+                      <div className="col">
+                        <div className="text-secondary">Spawn Time</div>
+                        <div>{pokemon.spawn_time}</div>
+                      </div>
+                    </div>
                     <hr />
                     <div className='row'>
                       {pokemon.prev_evolution?.map((pe, i) => {
